@@ -14,7 +14,11 @@ What things you need to install the software and how to install them
 ```
 Give examples
 ```
+## Requirements
 
+* **Python >= 2.7**
+
+PySimplex has no external dependencies outside of the Python standard library
 
 ## Contributors
 
