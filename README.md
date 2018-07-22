@@ -24,6 +24,10 @@ PySimplex has no external dependencies outside of the Python standard library
 
 * **Hossein Teimoori Faal**
 
+## References
+
+* [The Simplex Tree](https://hal.inria.fr/hal-01108441) - The web framework used
+* [Combinatorial Topology](http://www.cis.upenn.edu/~cis610/convex67.pdf) - Dependency Management
 
 ## License
 
