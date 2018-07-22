@@ -23,7 +23,7 @@ Let's start simple example of PySimplex in 3 dimension:
 ```
 You can create complex with TkInter package(Graphical User Interface) as follow,
 
-![alt text](https://raw.githubusercontent.com/Pakniat/PySimplex/master/images/te.jpg)
+![alt text](https://raw.githubusercontent.com/Pakniat/PySimplex/master/images/te1.jpg)
 
 
 ```
@@ -34,7 +34,7 @@ third textbox for creation of your complexs
 
 in the forth textbox you can delete face from complex
 ```
-
+![alt text](https://raw.githubusercontent.com/Pakniat/PySimplex/master/images/te2.jpg)
 ## Requirements
 
 * **Python >= 2.7**
