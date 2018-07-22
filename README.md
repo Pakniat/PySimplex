@@ -1,2 +1,2 @@
 # PySimplex
-combinatorial operator on the simplex tree
+combinatorial operator on the simplex tree .
