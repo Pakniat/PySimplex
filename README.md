@@ -5,15 +5,36 @@ The simplex tree is an efficient data structure for representing simplicial comp
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Let's start simple example of PySimplex in 3 dimension:
 
-### Prerequisites
+```python
+    def insert_childs(self, list_childs):
+        if len(list_childs) > 0:
+            if not (self.has_child(list_childs[self.HEAD])):
+                self.set_childs(list_childs[self.HEAD])
+                return
+            if self.has_child(list_childs[self.HEAD]):
+                list_recursion = []
+                for i in range(len(list_childs)):
+                    if i <> 0:
+                        list_recursion.append(list_childs[i])
+                self.get_child(list_childs[self.HEAD]).insert_childs(list_recursion)
+        return
+```
+You can create complex with TkInter package(Graphical User Interface) as follow,
 
-What things you need to install the software and how to install them
+![alt text](https://raw.githubusercontent.com/Pakniat/PySimplex/master/images/te.jpg)
+
 
 ```
-Give examples
+in the first textbox enter number of vertex of complex
+
+either can you use the second textbox enter flag complex, or you can use the
+third textbox for creation of your complexs
+
+in the forth textbox you can delete face from complex
 ```
+
 ## Requirements
 
 * **Python >= 2.7**
