@@ -1,7 +1,6 @@
 # PySimplex
-One Paragraph of project description goes here
 
-The simplex tree is an efficient data structure for representing simplicial complex 
+The simplex tree is an efficient data structure for representing simplicial complex of any dimension. All of face in simplicial complex store in a trie which nodes are bijection with the face of complex.
 ![alt text](https://raw.githubusercontent.com/Pakniat/PySimplex/master/images/sim1.png)
 
 ## Getting Started
