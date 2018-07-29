@@ -43,7 +43,10 @@ PySimplex has no external dependencies outside of the Python standard library.
 
 ## Contributors
 
-* **Hossein Teimoori Faal**
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+| [<img src="https://avatars3.githubusercontent.com/u/41550630?s=400&v=4" width="100px;"/><br /><sub><b>Hossein Teimoori Faal</b></sub>](https://github.com/loveprog323)<br />
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ## References
 
