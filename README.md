@@ -21,11 +21,11 @@ Let's start simple example of PySimplex in 3 dimension:
                 self.get_child(list_childs[self.HEAD]).insert_childs(list_recursion)
         return
 ```
-You can create complex with TkInter package(Graphical User Interface) as follow,
+* You can create complex with TkInter package(Graphical User Interface) as follow,
 
 ![alt text](https://raw.githubusercontent.com/Pakniat/PySimplex/master/images/te1.jpg)
 
-You can import *.obj file with use read_simplex_obj class
+* You can import *.obj file with use read_simplex_obj class
 
 ![Gif file](https://github.com/Pakniat/PySimplex/tree/master/images/record.gif)
 
