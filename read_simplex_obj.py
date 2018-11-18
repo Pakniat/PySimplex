@@ -1,4 +1,4 @@
-#
+#read *.obj file
 from simplex import  Simplex
 from textOperator import Operator
 
@@ -49,43 +49,46 @@ class ObjLoader(object):
 new1=ObjLoader('path obj file')
 new1.convert_obj('name')
 operator=Operator()
+
 #set vertext from file
-counter_temp_name_vertex=0
+
 vertices_simpelx=[]
-for item in new1.vertices:
-    counter_temp_name_vertex+=1
-    vertex_simplex = Simplex(str(counter_temp_name_vertex))
-    vertex_simplex.set_coordinate(item)
-    vertices_simpelx.append(vertex_simplex)
+def get_vertices():
+    counter_temp_name_vertex=0
+    for item in new1.vertices:
+        counter_temp_name_vertex+=1
+        vertex_simplex = Simplex(str(counter_temp_name_vertex))
+        vertex_simplex.set_coordinate(item)
+        vertices_simpelx.append(vertex_simplex)
 #set face from file
-counter_temp_name_vertex=0
 faces=[]
-for item in new1.faces:
-    temp=[]
-    for inner_item in item:
-        index_vertex=inner_item.find("/")
-        if inner_item[0:index_vertex]!='':
-            temp.append(int(inner_item[0:index_vertex]))
-    faces.append(temp)
-# create simplicial complex
-for i in faces:
-    i.sort()
-    temp_string_list = []
-    for q in i:
-        temp_string_list.append(str(q))
-    combination = operator.get_combination_with_list(temp_string_list)
-    for j in combination:
-        tempList=[]
-        tempListGraph=[]
-        for q in j:
-            tempGraph = Simplex(str(q))
-            tempList.append(q)
-            tempListGraph.append(tempGraph)
-        tempTree = []
-        for k in range(len(tempListGraph)):
-            if k <> 0:
-                tempTree.append(tempListGraph[k])
-        vertices_simpelx[int(min(tempList)) - 1].insert_childs(tempTree)
+def get_faces():
+    for item in new1.faces:
+        temp=[]
+        for inner_item in item:
+            index_vertex=inner_item.find("/")
+            if inner_item[0:index_vertex]!='':
+                temp.append(int(inner_item[0:index_vertex]))
+        faces.append(temp)
+    # create simplicial complex
+    for i in faces:
+        i.sort()
+        temp_string_list = []
+        for q in i:
+            temp_string_list.append(str(q))
+        combination = operator.get_combination_with_list(temp_string_list)
+        for j in combination:
+            tempList=[]
+            tempListGraph=[]
+            for q in j:
+                tempGraph = Simplex(str(q))
+                tempList.append(q)
+                tempListGraph.append(tempGraph)
+            tempTree = []
+            for k in range(len(tempListGraph)):
+                if k <> 0:
+                    tempTree.append(tempListGraph[k])
+            vertices_simpelx[int(min(tempList)) - 1].insert_childs(tempTree)
 
 # show structure of obj file
 operator.show_structures(vertices_simpelx)
