@@ -151,20 +151,3 @@ class Operator:
             for i in range(len(items)):
                 for cc in self.get_combination_list(items[i + 1:], n - 1):
                     yield [items[i]] + cc
-
-    def get_combination_with_list(self,edgeText):
-        A = []
-        result = []
-        for j in range(2, len(edgeText) + 1):
-            for x in self.get_combination_list(edgeText, j):
-                A.append(x)
-        for i in range(len(A)):
-            temp_result = []
-            for j in range(len(A[i])):
-                temp_result.append(int(A[i][j]))
-            if i < len(A) - 1:
-                result.append(temp_result)
-            if i == len(A) - 1:
-                result.append(temp_result)
-        return result
-

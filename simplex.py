@@ -7,7 +7,6 @@ class Simplex:
     def __init__(self, name):
         self.name = name
         self.parents = {}
-        self.coordinate=[]
         self.childs = {}
         self.starList = []
 
@@ -22,9 +21,6 @@ class Simplex:
     def get_child(self, child):
         if len(self.childs) > 0:
             return self.childs.get(child.name)
-
-    def set_coordinate(self,coordinate):
-        self.coordinate=coordinate
 
     def delete_child(self, child):
         del self.childs[child.name]
