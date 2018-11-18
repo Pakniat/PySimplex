@@ -25,7 +25,9 @@ You can create complex with TkInter package(Graphical User Interface) as follow,
 
 ![alt text](https://raw.githubusercontent.com/Pakniat/PySimplex/master/images/te1.jpg)
 
+You can import *.obj file with use read_simplex_obj class
 
+![Alt Text](https://github.com/Pakniat/PySimplex/tree/master/images/record.gif)
 ```
 in the first textbox enter number of vertex of complex
 
